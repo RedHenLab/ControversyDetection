@@ -1,0 +1,55 @@
+31447
+4736
+4736
+
+Topics by Latent Dirichlet Allocation model
+Topic #1 (0, '0.009*"can" + 0.009*"see" + 0.007*"rain" + 0.007*"come" + 0.007*"now" + 0.006*"one" + 0.006*"storm" + 0.006*"just" + 0.005*"right" + 0.005*"area"')
+can see rain come now one storm just right area
+https://www.scientificamerican.com/article/storm-scents-smell-rain/
+https://weather.weatherbug.com/news/Today-s-Weather-Outlook
+https://www.bostonglobe.com/metro/2017/04/01/storm-will-continue-into-evening-with-wet-snow/M1IlGC54hwnuyZZN4fEBJP/story.html
+Topic #2 (1, '0.031*"gun" + 0.023*"president" + 0.011*"say" + 0.010*"people" + 0.009*"can" + 0.009*"Obama" + 0.008*"think" + 0.008*"check" + 0.008*"executive" + 0.008*"law"')
+gun president say people can Obama think check executive law
+http://time.com/4168056/obama-gun-control-speech-transcript/
+http://www.cnn.com/2016/01/05/politics/obama-executive-action-gun-control/index.html
+https://www.theatlantic.com/politics/archive/2015/12/why-cant-president-obama-just-fix-the-gun-epidemic-himself/418839/
+Topic #3 (2, '0.009*"say" + 0.006*"man" + 0.005*"one" + 0.005*"year" + 0.005*"new" + 0.004*"now" + 0.004*"ship" + 0.004*"morning" + 0.004*"child" + 0.004*"people"')
+say man one year new now ship morning child people
+http://www.nbcwashington.com/news/national-international
+http://www.dailypress.com/news/breaking/
+https://www.consumer.ftc.gov/blog/faking-it-scammers-tricks-steal-your-heart-and-money?page=2
+Topic #4 (3, '0.014*"Korea" + 0.013*"North" + 0.013*"say" + 0.009*"test" + 0.008*"nuclear" + 0.008*"think" + 0.008*"bomb" + 0.007*"know" + 0.006*"now" + 0.006*"can"')
+Korea North say test nuclear think bomb know now can
+http://www.telegraph.co.uk/news/2017/05/14/north-korea-says-missile-test-aimed-testing-carrying-large-nuclear/
+http://www.cnn.com/2016/01/06/asia/north-korea-hydrogen-bomb-test/index.html
+https://www.nytimes.com/2017/04/24/world/asia/north-korea-nuclear-missile-program.html?mcubz=0
+Topic #5 (4, '0.013*"say" + 0.011*"think" + 0.011*"know" + 0.010*"like" + 0.008*"Clinton" + 0.007*"just" + 0.007*"one" + 0.007*"people" + 0.007*"can" + 0.007*"Trump"')
+say think know like Clinton just one people can Trump
+https://www.nytimes.com/2016/10/10/us/politics/transcript-second-debate.html?mcubz=0
+https://www.theguardian.com/us-news/2016/nov/09/why-did-people-vote-for-donald-trump-us-voters-explain
+https://michaelmoore.com/trumpwillwin/
+Topic #6 (5, '0.012*"say" + 0.011*"Saudi" + 0.011*"Iran" + 0.009*"Arabia" + 0.008*"people" + 0.007*"government" + 0.007*"now" + 0.007*"take" + 0.006*"federal" + 0.006*"year"')
+say Saudi Iran Arabia people government now take federal year
+https://newrepublic.com/minutes/127214/iranians-no-longer-allowed-make-pilgrimage-mecca
+https://en.wikipedia.org/wiki/Politics_of_Saudi_Arabia
+http://www.aljazeera.com/news/2016/09/saudi-arabia-iran-spar-hajj-pilgrimage-160906143744475.html
+Topic #7 (6, '0.012*"police" + 0.008*"say" + 0.008*"know" + 0.007*"time" + 0.007*"San" + 0.007*"attack" + 0.006*"suspect" + 0.006*"Bernardino" + 0.006*"shooting" + 0.005*"kill"')
+police say know time San attack suspect Bernardino shooting kill
+http://www.latimes.com/local/lanow/la-me-ln-san-bernardino-shooting-live-updates-htmlstory.html
+http://www.cnn.com/2017/04/10/us/san-bernardino-school-shooting/index.html
+http://fox40.com/2017/05/25/san-bernardino-terror-attack-suspects-shot-up-to-27-times/
+Topic #8 (7, '0.009*"say" + 0.008*"year" + 0.008*"one" + 0.007*"can" + 0.006*"now" + 0.006*"make" + 0.006*"see" + 0.005*"force" + 0.005*"Afghanistan" + 0.005*"team"')
+say year one can now make see force Afghanistan team
+https://www.wired.com/2017/05/meet-nerds-coding-way-afghanistan-war/
+http://www.npr.org/sections/thetwo-way/2015/12/03/458319524/pentagon-will-allow-women-in-frontline-ground-combat-positions
+https://www.nytimes.com/2016/08/28/world/asia/seal-team-6-afghanistan-man-left-for-dead.html?mcubz=0
+Topic #9 (8, '0.010*"say" + 0.008*"want" + 0.008*"back" + 0.008*"can" + 0.007*"know" + 0.007*"people" + 0.006*"day" + 0.006*"just" + 0.006*"one" + 0.006*"make"')
+say want back can know people day just one make
+https://www.goodreads.com/work/quotes/17992862-just-one-day
+https://medium.com/personal-growth/13-things-you-need-to-give-up-if-you-want-to-be-successful-44b5b9b06a26
+https://en.wikiquote.org/wiki/Paulo_Coelho
+Topic #10 (9, '0.009*"can" + 0.009*"right" + 0.009*"take" + 0.008*"see" + 0.007*"rain" + 0.007*"now" + 0.007*"look" + 0.006*"come" + 0.006*"®" + 0.006*"one"')
+can right take see rain now look come ® one
+http://www.wesh.com/article/what-does-a-chance-of-rain-really-mean/4440726
+https://www.youtube.com/watch?v=C3uaXCJcRrE
+https://www.howtogeek.com/228367/how-to-find-out-exactly-when-it-will-rain-and-when-it-will-stop/
