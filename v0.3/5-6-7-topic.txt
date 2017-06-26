@@ -1,0 +1,55 @@
+33539
+5027
+5027
+
+Topics by Latent Dirichlet Allocation model
+Topic #1 (0, '0.011*"can" + 0.008*"help" + 0.008*"insurance" + 0.008*"doctor" + 0.008*"right" + 0.008*"take" + 0.007*"like" + 0.006*"pain" + 0.006*"new" + 0.006*"day"')
+can help insurance doctor right take like pain new day
+http://www.rd.com/health/conditions/13-things-your-pain-doctor-wont-tell-you/
+http://www.businessinsider.com/doctors-insurance-companies-policies-opioid-use-2016-6
+https://www.usatoday.com/story/news/2016/03/15/cdc-issues-new-guidelines-opiate-prescribing-reduce-abuse-overdoses/81809704/
+Topic #2 (1, '0.013*"say" + 0.009*"know" + 0.007*"people" + 0.007*"can" + 0.007*"want" + 0.007*"one" + 0.007*"make" + 0.007*"now" + 0.006*"just" + 0.006*"think"')
+say know people can want one make now just think
+http://www.therevivalists.com/page/lyrics
+http://nymag.com/scienceofus/2017/05/do-you-have-any-idea-what-other-people-think-of-you.html
+https://breaker.audio/e/6584421
+Topic #3 (2, '0.015*"rain" + 0.012*"see" + 0.009*"look" + 0.009*"now" + 0.008*"come" + 0.008*"storm" + 0.007*"morning" + 0.007*"area" + 0.007*"right" + 0.007*"can"')
+rain see look now come storm morning area right can
+https://weather.com/storms/hurricane/news/tropical-storm-cindy-gulf-of-mexico
+http://www.wbrc.com/story/35051874/first-alert-update-heavy-rain-and-storms-in-the-morning-increasing-severe-risk-over-south-alabama
+http://www.fox25boston.com/weather/fox25-boston-weather-forecast/10893603
+Topic #4 (3, '0.016*"like" + 0.014*"know" + 0.010*"can" + 0.010*"just" + 0.009*"yeah" + 0.008*"right" + 0.008*"one" + 0.008*"say" + 0.007*"think" + 0.007*"see"')
+like know can just yeah right one say think see
+http://www.cc.com/feeds/transcripts/video/36572886-f05f-4ba8-810c-f01efac90539
+https://genius.com/Kap-g-i-see-you-lyrics
+https://english.stackexchange.com/questions/11198/yeah-right-expression
+Topic #5 (4, '0.012*"say" + 0.009*"bear" + 0.008*"China" + 0.007*"market" + 0.007*"now" + 0.007*"know" + 0.007*"think" + 0.006*"year" + 0.006*"citizen" + 0.005*"court"')
+say bear China market now know think year citizen court
+https://www.usatoday.com/story/news/politics/2017/04/26/lose-citizenship-fibbing-supreme-court-justices-fume/100935202/
+https://www.usatoday.com/story/news/politics/2017/06/22/supreme-court-upbraids-government-case-stripped-citizenship/419344001/
+https://www.nytimes.com/2016/11/29/us/politics/trump-flag-burners-citizenship-first-amendment.html?mcubz=0
+Topic #6 (5, '0.014*"say" + 0.011*"think" + 0.008*"Cruz" + 0.008*"people" + 0.007*"now" + 0.006*"know" + 0.006*"Trump" + 0.006*"Donald" + 0.006*"see" + 0.006*"trump"')
+say think Cruz people now know Trump Donald see trump
+http://time.com/4506350/donald-trump-ted-cruz-insults/
+http://time.com/4710456/donald-trump-time-interview-truth-falsehood/
+https://www.wired.com/2016/07/cruz-diehards-still-dont-forgive-trump-tweets/
+Topic #7 (6, '0.024*"Korea" + 0.023*"North" + 0.016*"test" + 0.013*"nuclear" + 0.012*"bomb" + 0.011*"say" + 0.010*"hydrogen" + 0.007*"China" + 0.006*"now" + 0.006*"can"')
+Korea North test nuclear bomb say hydrogen China now can
+https://www.nytimes.com/interactive/2017/04/12/world/asia/north-korea-nuclear-test.html?mcubz=0
+https://www.nytimes.com/2016/01/07/world/asia/north-korea-china-hydrogen-test.html?mcubz=0
+http://www.cnn.com/2016/09/08/asia/north-korea-seismic-activity/index.html
+Topic #8 (7, '0.022*"®" + 0.015*"may" + 0.014*"doctor" + 0.014*"take" + 0.012*"blood" + 0.008*"sugar" + 0.007*"risk" + 0.007*"tell" + 0.006*"right" + 0.006*"can"')
+® may doctor take blood sugar risk tell right can
+http://www.healthline.com/health/diabetes/borderline-diabetes-know-the-signs
+http://www.healthline.com/health/blood-sugar-tests
+https://www.tradjenta.com/how-it-works
+Topic #9 (8, '0.010*"year" + 0.009*"U.S." + 0.008*"force" + 0.007*"Afghanistan" + 0.006*"Taliban" + 0.006*"one" + 0.005*"say" + 0.005*"new" + 0.004*"%" + 0.004*"come"')
+year U.S. force Afghanistan Taliban one say new % come
+https://www.washingtonpost.com/world/national-security/us-poised-to-expand-military-effort-against-taliban-in-afghanistan/2017/05/08/356c4930-33fa-11e7-b412-62beef8121f7_story.html
+http://www.foxnews.com/world/2017/06/10/two-us-soldiers-2-others-wounded-in-afghan-solider-attack-official-says.html
+http://www.cnn.com/2017/04/22/world/afghanistan-base-militants-attack/index.html
+Topic #10 (9, '0.032*"gun" + 0.021*"president" + 0.010*"say" + 0.010*"people" + 0.009*"can" + 0.008*"check" + 0.008*"Obama" + 0.007*"background" + 0.007*"think" + 0.007*"make"')
+gun president say people can check Obama background think make
+http://time.com/4168056/obama-gun-control-speech-transcript/
+http://www.ncsl.org/research/civil-and-criminal-justice/summary-president-obama-gun-proposals.aspx
+https://www.nytimes.com/2016/01/06/us/politics/guns-president-obama-executive-action-background-checks.html?mcubz=0

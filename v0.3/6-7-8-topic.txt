@@ -1,0 +1,55 @@
+34333
+5036
+5036
+
+Topics by Latent Dirichlet Allocation model
+Topic #1 (0, '0.015*"say" + 0.013*"think" + 0.013*"Cruz" + 0.010*"people" + 0.009*"Trump" + 0.009*"Donald" + 0.009*"trump" + 0.008*"president" + 0.008*"know" + 0.007*"Ted"')
+say think Cruz people Trump Donald trump president know Ted
+http://abcnews.go.com/Politics/donald-trump-ted-cruz-endorse-president/story?id=40766426
+http://time.com/4506350/donald-trump-ted-cruz-insults/
+http://www.thedailybeast.com/articles/2016/03/25/bill-maher-supports-cruz-over-trump-better-ted-than-dead.html
+Topic #2 (1, '0.018*"police" + 0.012*"say" + 0.009*"officer" + 0.009*"attack" + 0.008*"man" + 0.007*"know" + 0.007*"just" + 0.007*"one" + 0.007*"see" + 0.007*"now"')
+police say officer attack man know just one see now
+http://www.independent.co.uk/news/uk/politics/parliament-shooting-latest-news-man-shot-explosions-heard-westminster-london-a7643686.html
+http://www.telegraph.co.uk/news/2017/03/22/man-shot-police-outside-parliament-officer-reportedly-shoots/
+https://www.theguardian.com/politics/blog/live/2017/mar/22/peers-say-brexit-with-no-trade-deal-would-cause-signicicant-damage-to-service-sector-politics-live
+Topic #3 (2, '0.018*"Korea" + 0.017*"North" + 0.011*"test" + 0.011*"say" + 0.010*"nuclear" + 0.009*"bomb" + 0.007*"hydrogen" + 0.006*"China" + 0.006*"now" + 0.006*"U.S."')
+Korea North test say nuclear bomb hydrogen China now U.S.
+http://www.cnn.com/2016/09/08/asia/north-korea-seismic-activity/index.html
+https://www.nytimes.com/2016/09/09/world/asia/north-korea-nuclear-test.html?mcubz=0
+http://www.bbc.com/news/world-asia-pacific-11813699
+Topic #4 (3, '0.013*"gun" + 0.012*"like" + 0.011*"say" + 0.010*"know" + 0.009*"can" + 0.009*"think" + 0.008*"people" + 0.008*"one" + 0.007*"want" + 0.007*"president"')
+gun like say know can think people one want president
+https://www.washingtonpost.com/news/wonk/wp/2016/01/08/why-so-many-americans-think-the-government-wants-their-guns/
+http://www.huffingtonpost.com/entry/obama-gun-control_us_5768140ce4b015db1bc9fca7
+http://time.com/4168056/obama-gun-control-speech-transcript/
+Topic #5 (4, '0.012*"doctor" + 0.011*"can" + 0.011*"take" + 0.009*"right" + 0.009*"®" + 0.008*"like" + 0.008*"help" + 0.007*"may" + 0.006*"new" + 0.006*"tell"')
+doctor can take right ® like help may new tell
+https://www.usnews.com/education/blogs/medical-school-admissions-doctor/articles/2016-06-28/6-red-flags-medical-school-isnt-the-right-choice
+http://health.usnews.com/top-doctors/articles/2011/07/26/9-signs-you-should-fire-your-doctor
+https://www.theatlantic.com/magazine/archive/2014/11/doctors-tell-all-and-its-bad/380785/
+Topic #6 (5, '0.014*"say" + 0.012*"know" + 0.008*"can" + 0.008*"think" + 0.007*"now" + 0.007*"just" + 0.007*"make" + 0.007*"one" + 0.006*"people" + 0.006*"see"')
+say know can think now just make one people see
+https://en.wikiquote.org/wiki/Bob_Dylan
+https://en.wikiquote.org/wiki/Douglas_Adams
+https://www.youtube.com/watch?v=nCkpzqqog4k
+Topic #7 (6, '0.011*"rain" + 0.010*"see" + 0.009*"look" + 0.008*"now" + 0.007*"come" + 0.007*"today" + 0.006*"morning" + 0.006*"right" + 0.006*"just" + 0.006*"snow"')
+rain see look now come today morning right just snow
+https://www.bostonglobe.com/metro/2017/04/01/storm-will-continue-into-evening-with-wet-snow/M1IlGC54hwnuyZZN4fEBJP/story.html
+http://www.kgw.com/weather/another-winter-storm-could-hit-portland-this-week/368290103
+http://www.nbc12.com/story/29695742/forecast
+Topic #8 (7, '0.010*"say" + 0.009*"water" + 0.009*"can" + 0.008*"people" + 0.007*"one" + 0.006*"take" + 0.006*"federal" + 0.006*"know" + 0.005*"come" + 0.005*"just"')
+say water can people one take federal know come just
+https://genius.com/Tee-grizzley-first-day-out-lyrics
+http://www.huffingtonpost.com/entry/flint-lead-water-epa_us_569522a8e4b086bc1cd5373c
+http://www.npr.org/sections/thetwo-way/2016/04/20/465545378/lead-laced-water-in-flint-a-step-by-step-look-at-the-makings-of-a-crisis
+Topic #9 (8, '0.008*"insurance" + 0.007*"can" + 0.007*"know" + 0.006*"now" + 0.006*"say" + 0.006*"one" + 0.006*"time" + 0.005*"just" + 0.005*"year" + 0.005*"make"')
+insurance can know now say one time just year make
+https://www.nytimes.com/2017/02/15/upshot/trump-makes-it-easier-to-ignore-the-obamacare-mandate-on-your-taxes.html?mcubz=0
+http://time.com/money/4470574/obamacare-providers-2017/
+http://www.pbs.org/newshour/making-sense/social-security-secrets-you-ne/
+Topic #10 (9, '0.011*"say" + 0.009*"people" + 0.007*"year" + 0.007*"one" + 0.005*"see" + 0.005*"now" + 0.005*"know" + 0.005*"can" + 0.005*"come" + 0.004*"think"')
+say people year one see now know can come think
+https://www.youtube.com/watch?v=dW6SkvErFEE
+https://palousemindfulness.com/quotes.html
+http://www.latimes.com/projects/grade-the-president/
