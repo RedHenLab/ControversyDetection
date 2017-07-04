@@ -1,0 +1,27 @@
+Topic #1 (84, '0.007*"discreet" + 0.006*"underwear" + 0.005*"leak" + 0.005*"-" + 0.004*"curve" + 0.003*"Marcy" + 0.003*"bladder" + 0.003*"product" + 0.003*"discreet.com" + 0.002*"coupon"')
+discreet underwear leak - curve Marcy bladder product discreet.com coupon
+http://www.alwaysdiscreet.com/
+http://samples.alwaysdiscreet.com/sampling/en-CA
+https://alwaysdiscreet.com/en-us/coupons-offers
+Topic #2 (58, '0.005*"explode" + 0.004*"retirement" + 0.003*"murder" + 0.003*"Mercedes" + 0.002*"injure" + 0.002*"Rowe" + 0.002*"breaker" + 0.002*"mayor" + 0.002*"Michelle" + 0.002*"circuit"')
+explode retirement murder Mercedes injure Rowe breaker mayor Michelle circuit
+http://ncamftp.wgbh.org/transcripts/stream1/stream1-357.html
+http://www.murfreesboropost.com/keyword/Bojangles,-Business,-Murfreesboro,-Rutherford-County,-Unemployment,-Economy,-Alive-Hospice,-Parenting,-Tennis,-Sports,-City-Council,-Parks-and-Recreation
+http://www.murfreesboropost.com/keyword/Business-Milestones,-Business,-Fifth-Third-Bank,-Bob-Gerard,-Reeves-Sain-Family-of-Medical-Services,-Lauren-Whitt,-Michael-Nanney,-MTSU,-MTCS,-Murfreesboro,-First-National-Bank-of-McMinnville,-TriStar-Health,-National-HealthCare-Corporation,-Carl-Holt,-Roscoe-Brown
+Topic #3 (39, '0.006*"year" + 0.006*"say" + 0.006*"see" + 0.006*"new" + 0.006*"now" + 0.005*"people" + 0.005*"can" + 0.005*"morning" + 0.005*"just" + 0.005*"right"')
+year say see new now people can morning just right
+https://www.washingtonpost.com/news/morning-mix/wp/2017/06/06/just-do-it-babe-woman-accused-of-pushing-her-boyfriend-to-kill-himself-is-on-trial-this-week/
+http://www.hankfm.com/blogs/dave-obrien/morning-mindbender
+https://www.nytimes.com/2017/02/16/us/politics/donald-trump-press-conference-transcript.html
+Topic #4 (71, '0.005*"incredible" + 0.005*"Victor" + 0.005*"Blackwell" + 0.005*"church" + 0.004*"laugh" + 0.004*"Alison" + 0.004*"tape" + 0.003*"pastor" + 0.003*"Lara" + 0.003*"panel"')
+incredible Victor Blackwell church laugh Alison tape pastor Lara panel
+https://thinkprogress.org/mark-burns-false-bio-aae56e2a7026
+http://www.cnn.com/videos/politics/2016/09/03/pastor-mark-burns-victor-blackwell-bts-ac.cnn
+http://www.cnn.com/videos/politics/2016/09/03/pastor-mark-burns-blackwell-intv-newday.cnn
+Topic #5 (12, '0.003*"Board" + 0.002*"Hover" + 0.002*"inhalation" + 0.002*"Victorville" + 0.002*"Madrid" + 0.002*"retailer" + 0.002*"shark" + 0.002*"bedroom" + 0.002*"ending" + 0.001*"Fareed"')
+Board Hover inhalation Victorville Madrid retailer shark bedroom ending Fareed
+http://geektyrant.com/news/2010/6/6/the-reef-movie-trailer-a-true-story-about-being-hunted-by-a.html
+http://deadline.com/2016/06/the-shallows-review-blake-lively-shark-jaws-1201779265/
+http://www.mylifetime.com/movies/stalkers-prey
+
+Doc: [(2, 0.34753320176548158), (44, 0.41761148176722823)]
