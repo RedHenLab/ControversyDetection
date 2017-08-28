@@ -1,5 +1,8 @@
 import os
 import pandas as pd
+import numpy as np
+os.chdir('/Users/DarkWizard/PycharmProjects/3rd_Python/Window_LDA_Data')
+import sqlite3
 
 
 def dist_jaccard(str1, str2):
@@ -80,10 +83,31 @@ df_27_29_lst = df_27_29.loc[-1].tolist()
 df_28_30_lst = df_28_30.loc[-1].tolist()
 df_29_31_lst = df_29_31.loc[-1].tolist()
 
+
+all_lists = [df_1_3_lst, df_2_4_lst, df_3_5_lst, df_4_6_lst, df_5_7_lst, df_6_8_lst, df_7_9_lst, df_8_10_lst, df_9_11_lst,
+            df_10_12_lst, df_11_13_lst, df_12_14_lst, df_13_15_lst, df_14_16_lst, df_15_17_lst, df_16_18_lst, df_17_19_lst,
+            df_18_20_lst, df_19_21_lst, df_20_22_lst, df_21_23_lst, df_22_24_lst, df_23_25_lst, df_24_26_lst, df_25_27_lst,
+            df_26_28_lst, df_27_29_lst, df_28_30_lst]
+
 scores = []
+for l1, l2 in zip(all_lists[:-1], all_lists[1:]): 
+    res = jaccard_score(l1, l2)
+    scores.append(res)
 
-score1 = [jaccard_score(df_1_3_lst, df_2_4_lst)]
-score2 = [jaccard_score(df_1_3_lst, df_2_4_lst)]
+def build_jaccard_matrix(score_lst):
+    df = pd.DataFrame(np.concatenate(score_lst).reshape(-1, 3)[:, ::-1], columns=['A', 'B', 'Dist'])
+    result = df.pivot('B', 'A', 'Dist').fillna(0)
+    return result
 
-scores.append(score1)
-scores.append(score2)
+index_matrix = []
+for score in scores:
+    res = build_jaccard_matrix(score)
+    index_matrix.append(res)
+
+
+cnx_matrix = sqlite3.connect("jaccard_matrix.db")
+matrix_name = "jaccard_matrix"
+count = 0
+for i in index_matrix:
+    i.to_sql("{}{}".format(matrix_name, count), cnx_matrix)
+    count += 1
