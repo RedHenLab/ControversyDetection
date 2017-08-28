@@ -1,4 +1,4 @@
-ControversyDetection
+# ControversyDetection
 
 This program detects if a story is controversial or not based on sentiment analysis. The sentiment analysis is based on WN-affect. 
 
