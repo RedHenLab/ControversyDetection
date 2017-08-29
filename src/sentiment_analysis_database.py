@@ -6,10 +6,10 @@ import numpy as np
 import sqlite3
 from textblob import TextBlob
 
-month = input("Which month's database do you want to build?(yyyy-mm format e.g.2016-06)\n>")
+month = input("Which month's sentiment analysis do you want to do?(yyyy-mm format e.g.2016-06)\n>")
 
-
-df = pd.read_csv('%s_stories.csv' %(month), index_col=0)
+cnx = sqlite3.connect("%s_stories.db" %(month))
+df = pd.read_sql("SELECT * FROM [%s_stories]" %(month), cnx)
 
 
 stories_df = df[df["lemmas"].apply(lambda x: len(eval(x))>=50)] # Getting rid of stories with less than 50 lemmas
@@ -66,19 +66,43 @@ for story in senti_stories:
 if len(stories_emotion_df) == len(emotion_stories):
     stories_emotion_df["wordnet_sentiments"] = emotion_stories
 
-emotion_types = ['positive', 'negative', 'ambiguous']
+node_emotion_types = ['positive', 'negative', 'ambiguous', 'neutral-emotion']
 
-d = {k: stories_emotion_df.wordnet_sentiments.apply(lambda x: ' '.join(x).count(k)) for k in emotion_types}
+subnode_emotion_types = ['gratitude', 'levity', 'fearlessness', 'positive-fear', 'positive-expectation',
+                        'self-pride', 'affection', 'enthusiasm', 'positive-hope', 'calmness', 'love', 'joy',
+                        'liking', 'ingratitude', 'daze', 'humility', 'compassion', 'despair', 'shame', 'anxiety',
+                        'negative-fear', 'general-dislike', 'sadness', 'surprise', 'thing', 'pensiveness', 'gravity',
+                        'ambiguous-fear', 'ambiguous-expectation', 'ambiguous-agitation', 'surprise', 'apathy',
+                        'neutral-unconcern']
 
+d = {k: stories_emotion_df.wordnet_sentiments.apply(lambda x: ' '.join(x).count(k)) for k in node_emotion_types}
 wordnet_sentiment_df = stories_emotion_df.assign(**d)
 
+temp_df = wordnet_sentiment_df
+temp_df['node_emotion_vector'] = temp_df['positive'] + temp_df['negative']+ temp_df['ambiguous'] + temp_df['neutral-emotion']
 
-wordnet_sentiment_df["controversiality"] = np.where(wordnet_sentiment_df.eval("(positive>=5 & negative>=5) & (negative-positive <= 10 | negative-positive >= -10)"), "controversial", "is not contrversial")
-print(wordnet_sentiment_df.shape)
+e = {k: stories_emotion_df.wordnet_sentiments.apply(lambda x: ' '.join(x).count(k)) for k in subnode_emotion_types}
+wordnet_sentiment_df = stories_emotion_df.assign(**e)
+
+node_temp_df = temp_df.loc[:,'ambiguous':'node_emotion_vector']
+
+sub_temp_df = wordnet_sentiment_df.loc[:, 'affection':'thing']
+sub_cols = list(sub_temp_df.columns)
+sub_temp_df['subnode_emotion_vector'] = sub_temp_df[sub_cols].sum(axis=1)
+
+sentiment_df = pd.concat([node_temp_df, sub_temp_df], axis=1)
 
 
-cnx = sqlite3.connect('%s_sentiments_annotated.db' %(month))
-wordnet_sentiment_df.to_csv("%s_stories_sentiment_annotated.csv" %(month))
+final_sentiment_df = pd.concat([stories_emotion_df, sentiment_df], axis=1)
+
+final_sentiment_df['positive/node_vector'] = final_sentiment_df['positive']/final_sentiment_df['node_emotion_vector']
+final_sentiment_df['negative/node_vector'] = final_sentiment_df['negative']/final_sentiment_df['node_emotion_vector']
+final_sentiment_df['ambiguous/node_vector'] = final_sentiment_df['ambiguous']/final_sentiment_df['node_emotion_vector']
+final_sentiment_df['neutral/node_vector'] = final_sentiment_df['neutral-emotion']/final_sentiment_df['node_emotion_vector']
+final_sentiment_df['node_vector/subnode_vector'] = final_sentiment_df['node_emotion_vector']/final_sentiment_df['subnode_emotion_vector']
+
+another_cnx = sqlite3.connect('%s_sentiments_annotated.db' %(month))
+final_sentiment_df.to_csv("%s_stories_sentiment_annotated.csv" %(month))
 df_sentiment = pd.read_csv('%s_stories_sentiment_annotated.csv' %(month), index_col=0 )
-df_sentiment.to_sql('%s_sentiments_annotated.db' %(month), cnx)
+df_sentiment.to_sql('%s_sentiments_annotated.db' %(month), another_cnx)
 
