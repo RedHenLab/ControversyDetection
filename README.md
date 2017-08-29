@@ -1,6 +1,6 @@
 # ControversyDetection
 
-This program detects if a story is controversial or not based on sentiment analysis. The sentiment analysis is based on WN-affect. 
+The following set of scripts provides methods for extracting controversial topics in a large database.
 
 ## Python Version and Module Requirements:
 
@@ -33,7 +33,7 @@ These two scripts, originally taken from [here](https://github.com/clemtoy/WNAff
 `'wordnet-1.6', 'wn-domains-3.2'` are needed to run this script. It takes a text file as an input and does a sentiment analysis using WN-Affect resources. Then it can determine if the text written in that file is controversial or not.
 
 ### sentiment_analysis_database.py
-This script takes an sqlite database as an input and then tags all the stories that are controversial. 
+This script takes an sqlite database as an input and then tags all the stories that are controversial based on sentiment scores.
 
 ### window_lda_model.py
 
@@ -44,6 +44,10 @@ This script takes two dates as input and then run an LDA model on all the storie
 **Needs optimization**
 
 Based on the `window_lda_model.py`, it builds a cluster of topics.
+
+### controversy_scoring.py
+
+This script takes the topics gotten from LDA model, evaluates them and gives them a controversy score
 
 ## To-Do
 - Automate the process of controversy detection. 
