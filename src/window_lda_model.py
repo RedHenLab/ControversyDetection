@@ -3,33 +3,29 @@
 import pandas as pd
 from gensim import corpora, models
 import re
+import sqlite3
 
-df = pd.read_csv("January_stories_with_date.csv", index_col=0)
-lemmas_df = df[df["lemmas"].apply(lambda x: len(eval(x))>=50)] # Getting rid of stories with less than 50 lemmas
+month = input("Which month's lda model do you want to build?(yyyy-mm format e.g.2016-06)\n>")
+
+cnx = sqlite3.connect("%s_stories.db" %(month))
+df = pd.read_sql("SELECT * FROM [%s_stories]" %(month), cnx)
+
+lemmas_df = df[df["lemmas"].apply(lambda x: len(eval(x))>=20)] # Getting rid of stories with less than 50 lemmas
 
 print("Length of initial df: %d" %(len(df)))
 print("Length of the filtered df: %d" %(len(lemmas_df)))
 
 new_lemmas_df = lemmas_df.reset_index(drop =True) # resetting the index so that it is later easier to concatenate a new df or find data
 
-new_lemmas_df['date'] = pd.to_datetime(new_lemmas_df['date'])
+new_lemmas_df['dates'] = pd.to_datetime(new_lemmas_df['dates']) # Setting up the format of dates column
 
-"""
-Manual date building
-"""
-# dates = len(df)*["2016-01-01"]
-# df['date'] = dates
-#df['date'] = pd.to_datetime(df['date'])
-# df.loc[df.index.isin(range(41746, 42261)), 'date'] = '2016-01-31'
-#df.to_csv("january_stories_with_date.csv")
-#df.loc[42261]
 
 def windowLdaModel(day1, day3):
     """
     This function takes two inputs, start date and end date, then it builds an lda model for those days' data and concatenate the lda dataframe with the given
     story dataframe
     """
-    day1_day3_df = new_lemmas_df[new_lemmas_df["date"].isin(pd.date_range("2016-01-%s" % (day1), "2016-01-%s" % (day3)))]
+    day1_day3_df = new_lemmas_df[new_lemmas_df["dates"].isin(pd.date_range("2016-01-%s" % (day1), "2016-01-%s" % (day3)))]
     day1_day3_df = day1_day3_df.reset_index(drop=True)
     day1_day3_lemmas = day1_day3_df["lemmas"].tolist()
     day1_day3_new_lemmas = [eval(i) for i in day1_day3_lemmas]
@@ -47,7 +43,7 @@ def windowLdaModel(day1, day3):
     # lda_model.save("lda_model")
     lda_corpus = lda_model[tfidf_corpus]
     # corpora.MmCorpus.serialize("lda_corpus.mm", lda_corpus)
-    topics_found_lda = lda_model.print_topics(num_topics=5, num_words=10)
+    # topics_found_lda = lda_model.print_topics(num_topics=5, num_words=10)
     all_topics = lda_model.print_topics(num_topics=100, num_words=10)
 
     topics = 6*["n/a"] #To match up the length size
@@ -76,3 +72,4 @@ startdate = input("What's the start date?(format: dd e.g. 10)\n >")
 enddate = input("What's the end date?(format: dd e.g. 10)\n >")
 
 windowLdaModel(startdate, enddate)
+

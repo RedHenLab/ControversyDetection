@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import os
 import pandas as pd
 import numpy as np
@@ -90,7 +92,7 @@ all_lists = [df_1_3_lst, df_2_4_lst, df_3_5_lst, df_4_6_lst, df_5_7_lst, df_6_8_
             df_26_28_lst, df_27_29_lst, df_28_30_lst]
 
 scores = []
-for l1, l2 in zip(all_lists[:-1], all_lists[1:]): 
+for l1, l2 in zip(all_lists[:-1], all_lists[1:]): # or zip(all_lists, all_lists[1:])
     res = jaccard_score(l1, l2)
     scores.append(res)
 

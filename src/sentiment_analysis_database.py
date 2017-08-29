@@ -2,7 +2,6 @@
 
 import pandas as pd
 from wnaffect import WNAffect # 3rd party open source module that mapped WNAffect from WN
-import numpy as np
 import sqlite3
 from textblob import TextBlob
 
@@ -43,7 +42,7 @@ wna = WNAffect('wordnet-1.6/', 'wn-domains-3.2/')
 new_lista = [stories_lst[i][2:-2].split() for i in range(len(stories_lst))]
 new_listb = [pos_tag_lst[i][2:-2].split("', '") for i in range(len(pos_tag_lst))]
 
-stories_pos_tag_together_list = [list(zip(new_lista[i], new_listb[i])) for i in range(len(stories_lst))]
+stories_pos_tag_together_list = [list(zip(new_lista[i], new_listb[i])) for i in range(len(stories_lst))] # Building a list of tuples(word, pos_tag)
 
 emotion_stories = []
 senti_stories = stories_pos_tag_together_list[:]
@@ -55,10 +54,7 @@ for story in senti_stories:
         if emo == None:
             continue
         else:
-            #             parent = emo.get_level(emo.level - 1)
-            #             grandparent = emo.get_level(emo.level - 2)
-            #             emotion_story.append(str(grandparent)+" -> "+str(parent)+" -> "+str(emo))
-            root_emotion = ' -> '.join([emo.get_level(i).name for i in range(emo.level + 1)])
+            root_emotion = ' -> '.join([emo.get_level(i).name for i in range(emo.level + 1)]) # Getting the emotion from the root level to the current level
             emotion_story.append(root_emotion)
 
     emotion_stories.append(emotion_story)
@@ -75,12 +71,14 @@ subnode_emotion_types = ['gratitude', 'levity', 'fearlessness', 'positive-fear',
                         'ambiguous-fear', 'ambiguous-expectation', 'ambiguous-agitation', 'surprise', 'apathy',
                         'neutral-unconcern']
 
+# Counting each node emotion types and building a column for each type
 d = {k: stories_emotion_df.wordnet_sentiments.apply(lambda x: ' '.join(x).count(k)) for k in node_emotion_types}
 wordnet_sentiment_df = stories_emotion_df.assign(**d)
 
 temp_df = wordnet_sentiment_df
 temp_df['node_emotion_vector'] = temp_df['positive'] + temp_df['negative']+ temp_df['ambiguous'] + temp_df['neutral-emotion']
 
+# Counting each subnode emotion types and building a column for each type
 e = {k: stories_emotion_df.wordnet_sentiments.apply(lambda x: ' '.join(x).count(k)) for k in subnode_emotion_types}
 wordnet_sentiment_df = stories_emotion_df.assign(**e)
 
@@ -90,11 +88,13 @@ sub_temp_df = wordnet_sentiment_df.loc[:, 'affection':'thing']
 sub_cols = list(sub_temp_df.columns)
 sub_temp_df['subnode_emotion_vector'] = sub_temp_df[sub_cols].sum(axis=1)
 
+# Concatenating them to get all the nodes and subnodes counts as an individual column
 sentiment_df = pd.concat([node_temp_df, sub_temp_df], axis=1)
 
 
 final_sentiment_df = pd.concat([stories_emotion_df, sentiment_df], axis=1)
 
+# Getting the probabilities of each node emotion types
 final_sentiment_df['positive/node_vector'] = final_sentiment_df['positive']/final_sentiment_df['node_emotion_vector']
 final_sentiment_df['negative/node_vector'] = final_sentiment_df['negative']/final_sentiment_df['node_emotion_vector']
 final_sentiment_df['ambiguous/node_vector'] = final_sentiment_df['ambiguous']/final_sentiment_df['node_emotion_vector']
