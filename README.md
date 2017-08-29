@@ -1,6 +1,6 @@
 # ControversyDetection
 
-The following set of scripts provides methods for extracting controversial topics in a large database. The controversiality is determined by `controversy_scoring.py`. This script takes the topic scores from the LDA model (window_lda_model.py) and the emotion vectors (from sentiment_analysis_database.py) and calculates controversy scores for each topic in the given timeline.
+The following set of scripts provides methods for extracting controversial topics in a large database. The controversiality is determined by `controversy_scoring.py`. This script takes the topic scores from the LDA model (`window_lda_model.py`) and the emotion vectors (from `sentiment_analysis_database.py`) and calculates controversy scores for each topic in the given timeline.
 
 ## Python Version and Module Requirements:
 
