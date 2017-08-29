@@ -46,7 +46,7 @@ def windowLdaModel(day1, day3):
     # topics_found_lda = lda_model.print_topics(num_topics=5, num_words=10)
     all_topics = lda_model.print_topics(num_topics=100, num_words=10)
 
-    topics = 6*["n/a"] #To match up the length size
+    topics = 7*["n/a"] #To match up the length size
     for t in all_topics:
         words = re.findall('"([^"]+)"', t[1])
         words = ' '.join(words)
